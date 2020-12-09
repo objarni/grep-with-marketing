@@ -19,11 +19,10 @@ void grep(char const* substring) {
         if(NULL != ptr)
             printf("%s\n", ptr);
     }
-    if(CLOUD_SERVICE_ENABLED) {
-        char slogans[500];
-        fetchMarketingSlogans(substring, slogans);
-        printf("This basic grep was brought to you by:\n%s\n", slogans);
-    }
+    char slogans[500];
+    fetchMarketingSlogans(substring, slogans);
+    printf("This basic grep was brought to you by:\n%s\n", slogans);
+
 }
 
 int main(int argc, char* argv[]) {
