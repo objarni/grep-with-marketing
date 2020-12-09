@@ -3,4 +3,4 @@ project(sot C)
 
 set(CMAKE_C_STANDARD 99)
 
-add_executable(basicgrep main.c cloudservice.h)
+add_executable(basicgrep main.c cloudservice.c)

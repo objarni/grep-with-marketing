@@ -6,7 +6,7 @@
 
 #define CLOUD_SERVICE_ENABLED 1
 
-int readline(int fd, char line[]) {
+static int readline(int fd, char line[]) {
     int result = read(0, line, 80);
     return result != 0;
 }
