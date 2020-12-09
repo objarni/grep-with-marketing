@@ -1,5 +1,4 @@
 #include <iostream>
-#include "grep.c"
 
 int main()
 {
