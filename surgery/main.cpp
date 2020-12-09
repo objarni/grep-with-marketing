@@ -1,5 +1,4 @@
 #include <iostream>
-#define CLOUD_SERVICE_ENABLED 1
 #include "grep.c"
 
 int main()
