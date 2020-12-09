@@ -1,0 +1,5 @@
+cmake_minimum_required(VERSION 3.17)
+add_definitions("-DSURGERY")
+set(CMAKE_CXX_STANDARD 17)
+project(surgery CXX)
+add_executable(main main.cpp grep.c)
