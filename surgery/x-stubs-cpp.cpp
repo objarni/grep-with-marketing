@@ -28,6 +28,3 @@
 */
 
 #include "stubs.h"
-
-void fetchMarketingSlogans(char const*, char*) { BOOM_VOID_CPP }
-int readline(int, char*) { BOOM_VALUE_CPP(1) }
