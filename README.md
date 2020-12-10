@@ -9,11 +9,11 @@ Instructions for one way to do this that demonstrates some useful techniques:
 
 1. Isolate the unit under test by moving it into the 'surgery'. The original code should still compile between each step.
     - [x] Make sure you can compile and run both main.c in the main project and main.cpp in the surgery, and know how to switch between them.
-    - [x] Copy the 'grep' function into the surgery. Hint - create a new c and h file, copy the code into the c file.
+    - [x] Copy the 'grep' function into the surgery (so it becomes the 'patient'). Hint - create a new c and h file, copy the code into the c file.
     - [x] Replace the original function with a #include of the relevant file in the surgery
     - [x] Run the original compilation - it should still be successful
     
-2. Get the 'grep' function to compile in its new home. Note you are done with this when you get linker errors. 
+2. Get the unit tests in the surgery to compile when they include the patient.
     - [x] Modify the unit test in the surgery to #include the grep.c file. Note - do not add it to CMakelists
     - [x] In the c file, add a #include for the h file, hidden using an #ifdef SURGERY
     - [x] Double check the original code compiles and runs exactly as before.
@@ -22,7 +22,7 @@ Instructions for one way to do this that demonstrates some useful techniques:
     - [x] Double check the original code compiles and runs exactly as before.  
 
 3. Make the code in the surgery also link by writing stubs
-     - [ ] in 'stubs.c' write simple implementations of all the prototypes listed in 'stubs.c'
+     - [ ] in 'stubs.c' write simple implementations of all the prototypes listed in 'stubs.h'
    
 4. Write unit tests
     - [ ] Write a unit test in the surgery that calls the 'grep' function. 
