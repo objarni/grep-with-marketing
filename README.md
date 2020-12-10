@@ -14,7 +14,7 @@ Instructions for one way to do this that demonstrates some useful techniques:
     - [ ] Run the original compilation - it should still be successful
     
 2. Get the 'grep' function to compile in its new home. Note you are done with this when you get linker errors. 
-    - [ ] Modify `main.cpp` in the surgery to call the 'grep' function
+    - [ ] Modify the unit test in the surgery to call the 'grep' function
     - [ ] In the c file, add a #include for the h file, hidden using an #ifdef SURGERY
     - [ ] Double check the original code compiles and runs exactly as before.
     - [ ] Add relevant standard library includes in the h file in the surgery.
@@ -28,8 +28,8 @@ Instructions for one way to do this that demonstrates some useful techniques:
     - [ ] Compile and link the code in the surgery, it should succeed.
    
 3. Write a first unit test.
-    - [ ] Add a call to the function under test in `main.cpp`. Run it and find the first explosion.
-    - [ ] Replace exploding stubs with read stubs one by one
+    - [ ] Write a unit test in the surgery that calls the 'grep' function. Run it and find the first explosion.
+    - [ ] Replace exploding stubs with real stubs one by one
    
 4. Write more unit tests
 5. Refactor the unit to be more testable
