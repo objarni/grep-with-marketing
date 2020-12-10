@@ -4,10 +4,10 @@
 
 extern "C"
 {
-// add #include for the unit under test
+#include "grep.c"
 }
 
 
 TEST_CASE ("SuiteName", "test case name") {
-    // write your test here
+    grep("something");
 }
