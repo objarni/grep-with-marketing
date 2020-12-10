@@ -7,19 +7,18 @@ You can use this code to practice some relevant techniques for that situation.
 The overall idea is you'd like to test the `grep` function defined in `main.c`. 
 Instructions for one way to do this that demonstrates some useful techniques:
 
-1. Isolate the unit under test by moving it into the 'surgery'. The original code should still compile, 
-   and the code in the surgery should soon compile but not link.
+1. Isolate the unit under test by moving it into the 'surgery'. The original code should still compile between each step.
     - [ ] Make sure you can compile and run both main.c in the main project and main.cpp in the surgery, and know how to switch between them.
-    - [ ] Create a h and c file pair in the surgery with the same name as the function you want to isolate and test, copy the function into the c file.
-    - [ ] Add the c file to the CMakeLists in the surgery.
-    - [ ] Compile and run both main and surgery - everything should still work.
-    - [ ] Replace the original function with a #include pointing at the c file in the surgery
+    - [ ] Copy the 'grep' function into the surgery. Hint - create a new c and h file, copy the code into the c file.
+    - [ ] Replace the original function with a #include of the relevant file in the surgery
     - [ ] Run the original compilation - it should still be successful
-    - [ ] Add an include to `main.cpp` for the new c file
-    - [ ] Run the surgery compilation - it should fail. Fix all the compiler errors but stop when you get linker errors. 
-            Hint: In the c file, add a #include for the h file, hidden using an #ifdef SURGERY 
-          - [ ] Add relevant standard library includes in the h file in the surgery.
-          - [ ] Add function prototypes in `stubs.h` for any other functions that the unit under test uses.
+    
+2. Get the 'grep' function to compile in its new home. Note you are done with this when you get linker errors. 
+    - [ ] Modify `main.cpp` in the surgery to call the 'grep' function
+    - [ ] In the c file, add a #include for the h file, hidden using an #ifdef SURGERY
+    - [ ] Double check the original code compiles and runs exactly as before.
+    - [ ] Add relevant standard library includes in the h file in the surgery.
+    - [ ] Add function prototypes in `stubs.h` for any other functions that the unit under test uses.
     - [ ] Double check the original code compiles and runs exactly as before.  
 
 2. Make the code in the surgery also link by generating [exploding fakes](https://github.com/jwgrenning/gen-xfakes)
