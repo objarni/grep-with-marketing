@@ -3,7 +3,7 @@ project(surgery CXX C)
 add_definitions("-DSURGERY")
 include(FetchContent)
 set(CMAKE_CXX_STANDARD 17)
-set(SOURCE_FILES main.cpp x-stubs-cpp.cpp stubs.cpp)
+set(SOURCE_FILES x-stubs-cpp.cpp stubs.cpp)
 
 # add your C files in here after PRIVATE and uncomment the line if you do
 # set(C_SOURCE_FILES PRIVATE )
@@ -26,6 +26,7 @@ FetchContent_Declare(
 FetchContent_MakeAvailable(ApprovalTests)
 
 # Surgery test executable
-add_executable(tests ${SOURCE_FILES} )
+add_executable(tests ${SOURCE_FILES} unit_test.cpp)
 target_link_libraries(tests Catch2::Catch2 ApprovalTests::ApprovalTests)
 add_test(NAME tests COMMAND tests)
+
