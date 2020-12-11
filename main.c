@@ -21,6 +21,7 @@ int main(int argc, char* argv[]) {
 
   setReadline(readline);
   setMarketingSlogansService(fetchMarketingSlogans);
+  setPrintf(printf);
 
   grep(argv[1]);
   return 0;
