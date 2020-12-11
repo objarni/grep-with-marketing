@@ -8,15 +8,12 @@ The overall idea is you'd like to test the `grep` function defined in `main.c`.
 Instructions for one way to do this that demonstrates some useful techniques:
 
 1. Isolate the unit under test by moving it into the 'surgery'. The original code should still compile between each step.
-    - [ ] Make sure you can compile and run both main.c in the main project and main.cpp in the surgery, and know how to switch between them.
-    - [ ] Copy the 'grep' function into the surgery (so it becomes the 'patient'). Hint - create a new c and h file, copy the code into the c file.
-    - [ ] Replace the original function with a #include of the relevant file in the surgery
+    - [ ] Make sure you can compile and run both main.c in the main project and unit_test.cpp in the surgery, and know how to switch between them.
+    - [ ] Copy the 'grep' function into 'patient.c' in the surgery.
+    - [ ] Replace the original function with #include surgery/patient.c
     - [ ] Run the original compilation - it should still be successful
     
 2. Get the unit tests in the surgery to compile when they include the patient.
-    - [ ] Modify the unit test in the surgery to #include the grep.c file. Note - do not add it to CMakelists
-    - [ ] In the c file, add a #include for the h file, hidden using an #ifdef SURGERY
-    - [ ] Double check the original code compiles and runs exactly as before.
     - [ ] Add relevant standard library includes in the h file in the surgery.
     - [ ] Add function prototypes in `stubs.h` for any other functions that the unit under test uses.
     - [ ] Double check the original code compiles and runs exactly as before.  

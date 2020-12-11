@@ -4,7 +4,7 @@
 
 extern "C"
 {
-// add #include for the unit under test
+#include "patient.c"
 }
 
 

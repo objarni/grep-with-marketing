@@ -3,10 +3,7 @@ project(surgery CXX C)
 add_definitions("-DSURGERY")
 include(FetchContent)
 set(CMAKE_CXX_STANDARD 17)
-set(SOURCE_FILES stubs.cpp)
-
-# add your C files in here after PRIVATE and uncomment the line if you do
-# set(C_SOURCE_FILES PRIVATE )
+set(SOURCE_FILES stubs.c)
 
 # Surgery main
 add_executable(main ${SOURCE_FILES})
