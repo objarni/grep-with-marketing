@@ -6,7 +6,7 @@
 
 extern "C"
 {
-#include "grep.c"
+#include "patient.c"
 }
 
 
