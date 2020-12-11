@@ -10,5 +10,5 @@ void fetchMarketingSlogans(char const * searchTerm, char* slogans);
 // communication with tests
 void resetOutput();
 void resetInput();
-void getOutput(char** output);
+char* getOutput();
 void setInput(char** lines, int numLines);

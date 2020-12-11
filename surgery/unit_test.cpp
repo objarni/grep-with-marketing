@@ -8,57 +8,56 @@ extern "C"
 #include "patient.c"
 }
 
-/*
- * convert the lines held in the output array of char* into a c++ string we can use with approvals
- */
-std::string gatherOutput() {
-    char **output = nullptr;
-    getOutput(output);
-    if (*output != nullptr)
-        return std::string(*output);
-    else
-        return "";
-}
 
 TEST_CASE ("Grep") {
     resetInput();
     resetOutput();
     auto toApprove = std::stringstream();
 
-    SECTION("empty input") {
-        toApprove << "Scenario: empty input";
+    SECTION("empty input")
+    {
+        toApprove << "Scenario: empty input" << std::endl;
         char **lines = nullptr;
         setInput(lines, 0);
         grep("something");
 
-        toApprove << gatherOutput();
-        ApprovalTests::Approvals::verify(toApprove);
+        toApprove << getOutput();
+        ApprovalTests::Approvals::verify(toApprove.str());
     }
 
-//    SECTION("two lines of input") {
-//        toApprove << "Scenario: two lines of input";
-//        // set up the stub input to the grep function
-//        strcpy(input[0], "hello");
-//        strcpy(input[1], "world of software!");
-//        actualInputLineCount = 2;
-//
-//        SECTION("find nothing") {
-//            grep("something");
-//
-//            auto allOutput = gatherOutput(toApprove);
-//            ApprovalTests::Approvals::verify(allOutput);
-//        }SECTION("find on first line") {
-//            grep("hello");
-//
-//            auto allOutput = gatherOutput(toApprove);
-//            ApprovalTests::Approvals::verify(allOutput);
-//        }SECTION("find on second line") {
-//            grep("world");
-//
-//            auto allOutput = gatherOutput(toApprove);
-//            ApprovalTests::Approvals::verify(allOutput);
-//        }
-//    }
+    SECTION("two lines of input")
+    {
+        // set up the stub input to the grep function
+        char line1[] = "hello";
+        char line2[] = "world of software!";
+        char* input[] = {line1, line2};
+        setInput(input, 2);
+
+        SECTION("find nothing")
+        {
+            toApprove << "Scenario: grep for something and find nothing" << std::endl;
+
+            grep("something");
+
+            toApprove << getOutput();
+            ApprovalTests::Approvals::verify(toApprove.str());
+        }
+        SECTION("find on first line")
+        {
+            toApprove << "Scenario: grep for hello and find it on the first line" << std::endl;
+            grep("hello");
+
+            toApprove << getOutput();
+            ApprovalTests::Approvals::verify(toApprove.str());
+        }
+        SECTION("find on second line") {
+            toApprove << "Scenario: grep for world and find it on the second line" << std::endl;
+            grep("world");
+
+            toApprove << getOutput();
+            ApprovalTests::Approvals::verify(toApprove.str());
+        }
+    }
 
 }
 

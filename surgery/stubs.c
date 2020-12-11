@@ -52,8 +52,8 @@ void resetInput() {
     currentInputLine = 0;
 }
 
-void getOutput(char** output) {
-    *output = buffer;
+char* getOutput() {
+    return buffer;
 }
 
 void setInput(char** lines, int numLines) {

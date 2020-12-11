@@ -1,6 +1,5 @@
+Scenario: grep for world and find it on the second line
 world of software!
-
 This basic grep was brought to you by:
 -- ProAgile --
-
 
