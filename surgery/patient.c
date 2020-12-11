@@ -1,5 +1,10 @@
 #ifdef SURGERY
-#include "patient.h"
+// Put includes the patient needs here
+#include <string.h>
+#include <unistd.h>
+
+// Put functions you do not want to test, but the patient depends on, in stubs.h
+#include "stubs.h"
 #endif
 
 // ONCE YOU HAVE THE PATIENT HERE YOU SHOULD NOT EDIT ANYTHING IN THIS FILE UNTIL IT IS UNDER TEST!
