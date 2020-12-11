@@ -11,10 +11,7 @@ int readline(int fd, char line[])
     }
     strcpy(line, input[currentInputLine]);
     currentInputLine++;
-    if (currentInputLine == actualInputLineCount)
-        return 0; // end of input
-    else
-        return 1;
+    return 1;
 }
 
 int printf( const char *restrict fmt, ... )

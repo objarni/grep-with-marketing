@@ -34,7 +34,7 @@ TEST_CASE ("Grep") {
     SECTION("two lines of input") {
         // set up the stub input to the grep function
         strcpy(input[0], "hello");
-        strcpy(input[1], "world!");
+        strcpy(input[1], "world of software!");
         actualInputLineCount = 2;
 
         SECTION("find nothing") {
