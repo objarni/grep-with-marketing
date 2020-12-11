@@ -10,9 +10,9 @@ int currentInputLine;
 // the actual total number of lines we will return
 int actualInputLineCount;
 // max number of input lines we are capable of returning from the stub
-const int MAX_INPUT_LINE_COUNT = 2;
+#define MAX_INPUT_LINE_COUNT 2
 // max length of a line of stub input
-const int INPUT_LINE_LENGTH = 80;
+#define INPUT_LINE_LENGTH 80
 // an array of lines of input to return from readline stub
 char input[MAX_INPUT_LINE_COUNT][INPUT_LINE_LENGTH + 1];
 
