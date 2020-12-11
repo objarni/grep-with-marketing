@@ -5,6 +5,11 @@ include(FetchContent)
 set(CMAKE_CXX_STANDARD 17)
 set(SOURCE_FILES stubs.c)
 
+# uncomment these lines to enable coverage measurements using gcov
+#set(CMAKE_C_FLAGS "--coverage")
+#set(CMAKE_CXX_FLAGS "--coverage")
+
+
 # Surgery main
 add_executable(main ${SOURCE_FILES})
 

@@ -1,5 +1,6 @@
 #pragma once
 
-#include "stubs.h"
+#include <string.h>
+#include <unistd.h>
 
-// put any other #includes needed by the patient here
+#include "stubs.h"

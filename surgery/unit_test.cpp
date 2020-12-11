@@ -2,15 +2,28 @@
 
 #include "ApprovalTests.hpp"
 
-#include "stubs.h"
-
 extern "C"
 {
+#include "stubs.h"
 #include "patient.c"
 }
 
+TEST_CASE ("Grep") {
 
-TEST_CASE ("SuiteName", "test case name") {
-    std::vector<std::string> input = {"hello", "world"};
-    grep("something");
+    strcpy(input[0], "hello");
+    strcpy(input[1], "world!");
+    currentInputLine = 0;
+    currentOutputLine = 0;
+
+    SECTION("grep doesn't find anything") {
+        grep("something");
+        REQUIRE(std::string(output[0]) == "This basic grep was brought to you by:\n%s\n");
+        REQUIRE(std::string(output[1]) == "");
+    }
+    SECTION("grep finds something") {
+        grep("hello");
+        REQUIRE(std::string(output[0]) == "%s\n");
+        REQUIRE(std::string(output[1]) == "This basic grep was brought to you by:\n%s\n");
+    }
 }
+
