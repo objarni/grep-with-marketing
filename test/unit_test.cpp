@@ -1,12 +1,11 @@
 
 #include "ApprovalTests.hpp"
-#include "catch2/catch.hpp"
+#include "Catch.hpp"
 
 extern "C"
 {
 #include "stubs.h"
-#include "patient.h"
-#include "patient.c"
+#include "grep.h"
 }
 
 

@@ -1,20 +1,15 @@
-#ifdef SURGERY
-// Put includes the patient needs here
+
 #include <string.h>
 #include <unistd.h>
+#include <stdio.h>
 
-// Put functions you do not want to test, but the patient depends on, in stubs.h
-#include "stubs.h"
-#include "patient.h"
-
-#endif
-
-// ONCE YOU HAVE THE PATIENT HERE YOU SHOULD NOT EDIT ANYTHING IN THIS FILE UNTIL IT IS UNDER TEST!
+#include "grep.h"
 
 cloudService_T fetchMarketingSlogans_Ptr;
 readline_T readline_Ptr;
 
-void setMarketingSlogansService(cloudService_T ptr) {
+void setMarketingSlogansService(cloudService_T ptr)
+{
     fetchMarketingSlogans_Ptr = ptr;
 }
 
