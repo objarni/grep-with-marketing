@@ -1,13 +1,17 @@
 
 #include <stdarg.h>
+#include <stdio.h>
 
 #include "stubs.h"
 
 int readline(int fd, char line[])
 {
+    if (currentInputLine == actualInputLineCount) {
+        return 0;
+    }
     strcpy(line, input[currentInputLine]);
     currentInputLine++;
-    if (currentInputLine == INPUT_LINE_COUNT)
+    if (currentInputLine == actualInputLineCount)
         return 0; // end of input
     else
         return 1;
@@ -15,12 +19,17 @@ int readline(int fd, char line[])
 
 int printf( const char *restrict fmt, ... )
 {
-    strcpy(output[currentOutputLine], fmt);
+    va_list ap;
+    int r;
+    va_start(ap, fmt);
+    r = vsprintf(output[currentOutputLine], fmt, ap);
+    va_end(ap);
     currentOutputLine++;
-    return 0;
+    return r;
 }
 
 void fetchMarketingSlogans(char const *searchTerm, char *slogans)
 {
+    strcpy(slogans, "-- ProAgile --");
 }
 

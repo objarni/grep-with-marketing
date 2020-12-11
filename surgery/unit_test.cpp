@@ -1,6 +1,6 @@
-#define APPROVALS_CATCH
 
 #include "ApprovalTests.hpp"
+#include "catch2/catch.hpp"
 
 extern "C"
 {
@@ -8,22 +8,54 @@ extern "C"
 #include "patient.c"
 }
 
-TEST_CASE ("Grep") {
+/*
+ * convert the lines held in the output array of char* into a c++ string we can use with approvals
+ */
+std::string gatherOutput() {
+    auto* to_approve = new std::stringstream();
+    for (int i = 0; i < currentOutputLine; i++ ) {
+        (*to_approve) << output[i] << "\n";
+    }
+    return to_approve->str();
+}
 
-    strcpy(input[0], "hello");
-    strcpy(input[1], "world!");
+TEST_CASE ("Grep") {
     currentInputLine = 0;
     currentOutputLine = 0;
 
-    SECTION("grep doesn't find anything") {
+    SECTION("empty input") {
+        actualInputLineCount = 0;
         grep("something");
-        REQUIRE(std::string(output[0]) == "This basic grep was brought to you by:\n%s\n");
-        REQUIRE(std::string(output[1]) == "");
+
+        auto allOutput = gatherOutput();
+        ApprovalTests::Approvals::verify(allOutput);
     }
-    SECTION("grep finds something") {
-        grep("hello");
-        REQUIRE(std::string(output[0]) == "%s\n");
-        REQUIRE(std::string(output[1]) == "This basic grep was brought to you by:\n%s\n");
+
+    SECTION("two lines of input") {
+        // set up the stub input to the grep function
+        strcpy(input[0], "hello");
+        strcpy(input[1], "world!");
+        actualInputLineCount = 2;
+
+        SECTION("find nothing") {
+            grep("something");
+
+            auto allOutput = gatherOutput();
+            ApprovalTests::Approvals::verify(allOutput);
+        }
+        SECTION("find on first line") {
+            grep("hello");
+
+            auto allOutput = gatherOutput();
+            ApprovalTests::Approvals::verify(allOutput);
+        }
+        SECTION("find on second line") {
+            grep("world");
+
+            auto allOutput = gatherOutput();
+            ApprovalTests::Approvals::verify(allOutput);
+        }
     }
+
 }
 
