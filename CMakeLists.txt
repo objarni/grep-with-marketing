@@ -5,7 +5,6 @@ set(CMAKE_C_STANDARD 99)
 
 enable_testing()
 add_subdirectory(src)
-add_subdirectory(lib)
 add_subdirectory(test)
 
 add_executable(main main.c)
