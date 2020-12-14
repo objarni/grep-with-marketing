@@ -2,7 +2,7 @@
 #include <stdio.h>
 #include <unistd.h>
 
-#include "cloudservice.h"
+#include "src/cloudservice.h"
 
 #define CLOUD_SERVICE_ENABLED 1
 
