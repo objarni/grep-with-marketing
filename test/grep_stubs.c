@@ -2,7 +2,7 @@
 #include <stdarg.h>
 #include <stdio.h>
 
-#include "stubs.h"
+#include "grep_stubs.h"
 
 // readline global state
 // index of line we will return when readline is next called

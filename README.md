@@ -4,6 +4,15 @@ Grep with Marketing
 Sometimes the reason you don't write unit tests is because it's really difficult to isolate a testable unit. 
 You can use this code to practice some relevant techniques for that situation.
 
+4 steps
+
+0. initial state - main
+1. get patient into surgery, everything compiles - with_surgery
+2. write unit tests and stubs for patient - with_unittests
+3. refactor to have abstractions so we can insert stubs without needing surgery - with_abstractions
+4. put the patient back into teh real build and test via abstractions - sample_solution
+
+
 The overall idea is you'd like to test the `grep` function defined in `main.c`. 
 Instructions for one way to do this that demonstrates some useful techniques:
 

@@ -1,6 +1,6 @@
 set(TEST_NAME grep_test)
 include(FetchContent)
-set(SOURCE_FILES stubs.c main.cpp unit_test.cpp)
+set(SOURCE_FILES grep_stubs.c main.cpp unit_test.cpp)
 
 # uncomment these lines to enable coverage measurements using gcov
 #set(CMAKE_C_FLAGS "--coverage")

@@ -4,7 +4,7 @@
 
 extern "C"
 {
-#include "stubs.h"
+#include "grep_stubs.h"
 #include "grep.h"
 }
 
