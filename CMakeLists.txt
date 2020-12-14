@@ -3,4 +3,4 @@ project(sot C)
 
 set(CMAKE_C_STANDARD 99)
 
-add_executable(basicgrep main.c cloudservice.c surgery/main.cpp)
+add_executable(basicgrep main.c src/cloudservice.c surgery/unit_tests.cpp)

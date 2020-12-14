@@ -3,8 +3,8 @@ project(surgery CXX C)
 add_definitions("-DSURGERY")
 include(FetchContent)
 set(CMAKE_CXX_STANDARD 17)
-set(SOURCE_FILES main.cpp x-stubs-cpp.cpp stubs.cpp)
-set(C_SOURCE_FILES PRIVATE grep.c)
+set(SOURCE_FILES unit_tests.cpp stubs.cpp)
+set(C_SOURCE_FILES PRIVATE patient.c)
 
 # Surgery main
 add_executable(main ${SOURCE_FILES})

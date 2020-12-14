@@ -1,8 +1,0 @@
-/usr/bin/ld: CMakeFiles/main.dir/main.cpp.o: in function `grep(char const*)':
-/home/olof/repos/unversioned/sot/surgery/grep.c:7: undefined reference to `readline(int, char*)'
-/usr/bin/ld: /home/olof/repos/unversioned/sot/surgery/grep.c:15: undefined reference to `fetchMarketingSlogans(char const*, char*)'
-collect2: error: ld returned 1 exit status
-make[3]: *** [CMakeFiles/main.dir/build.make:104: main] Error 1
-make[2]: *** [CMakeFiles/Makefile2:96: CMakeFiles/main.dir/all] Error 2
-make[1]: *** [CMakeFiles/Makefile2:103: CMakeFiles/main.dir/rule] Error 2
-make: *** [Makefile:138: main] Error 2

@@ -1,5 +1,8 @@
 #include <iostream>
-#include "grep.c"
+
+#extern "C" {
+    #include "patient.c"
+}
 
 int main()
 {

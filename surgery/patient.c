@@ -1,5 +1,8 @@
 #ifdef SURGERY
-#include "grep.h"
+#include <string.h>
+#include <stdio.h>
+#include <unistd.h>
+#include "stubs.h"
 #endif
 
 void grep(char const* substring) {

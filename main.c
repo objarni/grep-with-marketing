@@ -2,7 +2,7 @@
 #include <stdio.h>
 #include <unistd.h>
 
-#include "cloudservice.h"
+#include "src/cloudservice.h"
 
 #define CLOUD_SERVICE_ENABLED 1
 
@@ -11,7 +11,7 @@ static int readline(int fd, char line[]) {
     return result != 0;
 }
 
-#include "surgery/grep.c"
+#include "surgery/patient.c"
 
 int main(int argc, char* argv[]) {
   if(argc != 2)
@@ -21,6 +21,7 @@ int main(int argc, char* argv[]) {
       printf("This will print any line of 'somefile' containing 'somestring'\n");
       return 0;
   }
+
   grep(argv[1]);
   return 0;
 }
