@@ -6,8 +6,8 @@ set(CMAKE_CXX_STANDARD 17)
 set(SOURCE_FILES stubs.c main.cpp)
 
 # uncomment these lines to enable coverage measurements using gcov
-#set(CMAKE_C_FLAGS "--coverage")
-#set(CMAKE_CXX_FLAGS "--coverage")
+set(CMAKE_C_FLAGS "--coverage")
+set(CMAKE_CXX_FLAGS "--coverage")
 
 # Surgery test - catch2
 FetchContent_Declare(

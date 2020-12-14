@@ -20,10 +20,6 @@ int main(int argc, char* argv[]) {
       return 0;
   }
 
-  setReadline(readline);
-  setMarketingSlogansService(fetchMarketingSlogans);
-  setPrintf(printf);
-
   grep(argv[1]);
   return 0;
 }

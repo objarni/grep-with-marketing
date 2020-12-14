@@ -13,9 +13,6 @@ extern "C"
 TEST_CASE ("Grep") {
     resetInput();
     resetOutput();
-    setMarketingSlogansService(fetchMarketingSlogans);
-    setReadline(readline);
-    setPrintf(printf);
 
     auto toApprove = std::stringstream();
 
