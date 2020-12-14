@@ -13,6 +13,7 @@
 
 cloudService_T fetchMarketingSlogans_Ptr;
 readline_T readline_Ptr;
+printf_T printf_Ptr;
 
 void setMarketingSlogansService(cloudService_T ptr) {
     fetchMarketingSlogans_Ptr = ptr;
