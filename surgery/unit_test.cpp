@@ -15,6 +15,7 @@ TEST_CASE ("Grep") {
     resetOutput();
     setMarketingSlogansService(fetchMarketingSlogans);
     setReadline(readline);
+    setPrintf(printf);
 
     auto toApprove = std::stringstream();
 

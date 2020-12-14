@@ -7,3 +7,6 @@ void setMarketingSlogansService(cloudService_T ptr);
 
 typedef int (*readline_T)(int fd, char line[]);
 void setReadline(readline_T ptr);
+
+typedef int (*printf_T)(const char *, ...);
+void setPrintf(printf_T ptr);

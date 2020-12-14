@@ -23,13 +23,18 @@ void setReadline(readline_T ptr)
     readline_Ptr = ptr;
 }
 
+void setPrintf(printf_T ptr)
+{
+    printf_Ptr = ptr;
+}
+
 void grep(char const* substring) {
     char buf[80];
     while(readline_Ptr(STDIN_FILENO, buf))
     {
         char *ptr = strstr(buf, substring);
         if(NULL != ptr)
-            printf("%s\n", ptr);
+            printf_Ptr("%s\n", ptr);
     }
     char slogans[500];
     fetchMarketingSlogans_Ptr(substring, slogans);
