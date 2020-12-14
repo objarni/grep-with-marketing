@@ -9,8 +9,8 @@ The surgery procedure
 0. initial state of production code - main branch
 1. get patient into surgery which builds, but empty stubs - with_surgery
 2. ready to start writing unit tests - stubs provided for convenience - with_stubs_no_tests
-2. write unit tests and stubs for patient - with_coverage
-3. refactor to have abstractions so we can insert stubs without needing surgery - with_abstractions
+2. increase coverage by writing unit tests (using stubs) for patient - with_coverage
+3. refactor patient to use abstractions so we can insert stubs without needing surgery - with_abstractions
 4. put the patient back into teh real build and test via abstractions - sample_solution
 
 
