@@ -4,9 +4,9 @@ Grep with Marketing
 Sometimes the reason you don't write unit tests is because it's really difficult to isolate a testable unit. 
 You can use this code to practice some relevant techniques for that situation.
 
-4 steps
-
-0. initial state - main
+The surgery procedure
+---------------------
+0. initial state of production code - main branch
 1. get patient into surgery, everything compiles - with_surgery
 2. ready to start writing unit tests - stubs provided for convenience - with_stubs_no_tests
 2. write unit tests and stubs for patient - with_coverage
