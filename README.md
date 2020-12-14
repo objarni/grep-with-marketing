@@ -8,6 +8,7 @@ You can use this code to practice some relevant techniques for that situation.
 
 0. initial state - main
 1. get patient into surgery, everything compiles - with_surgery
+2. ready to start writing unit tests - stubs provided for convenience - with_stubs_no_tests
 2. write unit tests and stubs for patient - with_coverage
 3. refactor to have abstractions so we can insert stubs without needing surgery - with_abstractions
 4. put the patient back into teh real build and test via abstractions - sample_solution
