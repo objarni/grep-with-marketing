@@ -3,12 +3,13 @@
 #include <unistd.h>
 
 #include "src/cloudservice.h"
-#include "src/grep.h"
 
 static int readline(int fd, char line[]) {
     int result = read(0, line, 80);
     return result != 0;
 }
+
+#include "surgery/patient.c"
 
 int main(int argc, char* argv[]) {
   if(argc != 2)

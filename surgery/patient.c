@@ -5,9 +5,10 @@
 
 // Put functions you do not want to test, but the patient depends on, in stubs.h
 #include "stubs.h"
-#include "patient.h"
 
 #endif
+
+#include "patient.h"
 
 // ONCE YOU HAVE THE PATIENT HERE YOU SHOULD NOT EDIT ANYTHING IN THIS FILE UNTIL IT IS UNDER TEST!
 
