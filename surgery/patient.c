@@ -40,6 +40,6 @@ void grep(char const* substring) {
     }
     char slogans[500];
     fetchMarketingSlogans_Ptr(substring, slogans);
-    printf("This basic grep was brought to you by:\n%s\n", slogans);
+    printf_Ptr("This basic grep was brought to you by:\n%s\n", slogans);
 
 }
