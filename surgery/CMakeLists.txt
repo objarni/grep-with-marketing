@@ -1,4 +1,4 @@
-cmake_minimum_required(VERSION 3.17)
+cmake_minimum_required(VERSION 3.16)
 project(surgery CXX C)
 add_definitions("-DSURGERY")
 include(FetchContent)
