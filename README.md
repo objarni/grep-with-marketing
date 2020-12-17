@@ -37,3 +37,8 @@ Instructions for one way to do this that demonstrates some useful techniques:
    
 5. Refactor the unit to be more testable
 6. Re-insert the unit into the main code and integrate the tests so they are run as part of the normal build.
+
+
+# KNOWN BUGS IN BASICGREP (could be excercise material!)
+# - readline does not actually stop at \n, but just reads chunks of 80
+# - grep does not print full lines, but substrings of the read line

@@ -17,7 +17,7 @@ void grep(char const* substring) {
     {
         char *ptr = strstr(buf, substring);
         if(NULL != ptr)
-            printf("%s\n", ptr);
+            printf("%s\n", buf);
     }
     if(CLOUD_SERVICE_ENABLED) {
         char slogans[500];
