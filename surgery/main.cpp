@@ -5,4 +5,4 @@
 
 #include <memory>
 auto defaultReporterDisposer =
-        ApprovalTests::Approvals::useAsDefaultReporter(std::make_shared<ApprovalTests::ClipboardReporter>());
+        ApprovalTests::Approvals::useAsDefaultReporter(std::make_shared<ApprovalTests::DiffReporter>());
