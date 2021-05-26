@@ -7,6 +7,6 @@ enable_testing()
 add_subdirectory(src)
 add_subdirectory(test)
 
-add_executable(main main.c)
-target_link_libraries(main src)
+add_executable(basicgrep main.c)
+target_link_libraries(basicgrep src)
 
